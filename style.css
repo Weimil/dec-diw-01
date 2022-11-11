@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+}
+
+video {
+  max-width: 100%;
+}
+
+#position {
+  width: 720px;
+  margin: auto;
+}
+
+.player {
+  position: absolute;
+}
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  visibility: hidden;
+  width: 400px;
+  margin-left: -200px;
+  transition: 1s all;
+  opacity: 0.75;
+  border-radius: 10px;
+  background-color: #282828;
+  box-shadow: 3px 3px 5px black;
+}
+
+button, .controls {
+  background: linear-gradient(to bottom, #222222, #666666);
+}
+
+.player:hover .controls, .player:focus .controls {
+  opacity: 1;
+}
+
+button:before {
+  font-size: 20px;
+  position: relative;
+  content: attr(data-icon);
+  color: #AAAAAA;
+  text-shadow: 1px 1px 0 black;
+}
+
+.play:before {
+  font-size: 22px;
+}
+
+button, .timer {
+  line-height: 19px;
+  height: 38px;
+  border-right: 1px solid #333333;
+  box-shadow: inset 0 -5px 25px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  position: relative;
+  flex: 1;
+  border: 0;
+  outline: none;
+}
+
+.play {
+  border-radius: 10px 0 0 10px;
+}
+
+.fwd {
+  border-radius: 0 10px 10px 0;
+}
+
+.timer {
+  font-family: monospace;
+  font-size: 10px;
+  line-height: 38px;
+  position: relative;
+  flex: 5;
+  color: white;
+  text-shadow: 1px 1px 0 black;
+}
+.timer div {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.timer span {
+  position: absolute;
+  z-index: 3;
+  left: 19px;
+}
+
+button:hover, button:focus {
+  box-shadow: inset 1px 1px 2px black;
+}
+
+button:active {
+  box-shadow: inset 3px 3px 2px black;
+}
+
+.active:before {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
